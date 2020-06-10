@@ -27,12 +27,12 @@
                     'byte_list' = [1,2,3] :: list(),
                     'rsl' = [] :: list(),
                     'osl' :: list(),
-                    'string_set' :: set(),
-                    'rss' = sets:new() :: set(),
-                    'oss' :: set(),
-                    'string_map' :: dict(),
-                    'rsm' = dict:new() :: dict(),
-                    'osm' :: dict(),
+                    'string_set' :: sets:set(),
+                    'rss' = sets:new() :: sets:set(),
+                    'oss' :: sets:set(),
+                    'string_map' :: dict:dict(),
+                    'rsm' = dict:new() :: dict:dict(),
+                    'osm' :: dict:dict(),
                     'structb' :: 'StructB'()}).
 -type 'StructA'() :: #'StructA'{}.
 

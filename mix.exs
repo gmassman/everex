@@ -23,12 +23,13 @@ defmodule Everex.Mixfile do
         contributors: ["Johan Wärlander"],
         licenses: ["Apache 2.0"],
         links: %{ "GitHub": "https://github.com/jwarlander/everex" },
-        files: [ 
+        files: [
           "lib", "priv", "mix.exs", "README*", "LICENSE*",
           "CHANGELOG*", "include", "src"
         ],
-     ],
-     deps: deps]
+      ],
+      deps: deps()
+    ]
   end
 
   # Configuration for the OTP application
@@ -53,8 +54,9 @@ defmodule Everex.Mixfile do
       {:ex_doc, "~> 0.7", only: :dev},
       {:oauther, "~> 1.0.1"},
       {:httpoison, "~> 0.6.2"},
-      {:cowboy, "~> 1.0.0"},
-      {:plug, "~> 0.11.1"},
+      {:cowboy, "~> 2.8.0"},
+      {:plug, "~> 1.10.2"},
+      {:plug_cowboy, "~> 2.0"}
     ]
   end
 end

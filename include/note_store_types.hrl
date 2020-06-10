@@ -114,8 +114,8 @@
 
 %% struct 'NoteCollectionCounts'
 
--record('NoteCollectionCounts', {'notebookCounts' :: dict(),
-                                 'tagCounts' :: dict(),
+-record('NoteCollectionCounts', {'notebookCounts' :: dict:dict(),
+                                 'tagCounts' :: dict:dict(),
                                  'trashCount' :: integer()}).
 -type 'NoteCollectionCounts'() :: #'NoteCollectionCounts'{}.
 

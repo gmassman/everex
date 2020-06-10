@@ -306,7 +306,7 @@ skip_list_loop(Proto0, Map = #protocol_list_begin{etype = Etype,
 %%         tuple()  -- for struct
 %%       | list()   -- for list
 %%       | dictionary()   -- for map
-%%       | set()    -- for set
+%%       | sets:set()    -- for set
 %%       | any()    -- for base types
 %%
 %% Description:

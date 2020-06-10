@@ -1,4 +1,4 @@
-# 
+#
 # Copyright 2015 Johan Wärlander
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,8 +20,14 @@ defmodule Everex.Util do
     quote do
       require Record
       require Everex.Util
-      import Everex.Util, only: [deftype: 3]
+      import Everex.Util, only: [deftype: 3, types_path: 1]
     end
+  end
+
+  def types_path(file) do
+    ["../../../include", file]
+    |> Path.join()
+    |> Path.expand(__ENV__.file)
   end
 
   def record_to_struct(the_record, fields, struct_name) do
@@ -80,7 +86,7 @@ defmodule Everex.Util do
   defmacro deftype(mod, tag, fields) do
     quote do
       defmodule unquote(mod) do
-        @derive [Access, Collectable]
+        # @derive [Access, Collectable]
         defstruct unquote(fields)
 
         Record.defrecord :record, unquote(tag), unquote(fields)

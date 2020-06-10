@@ -1,4 +1,4 @@
-# 
+#
 # Copyright 2015 Johan Wärlander
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -27,103 +27,103 @@ defmodule Everex.Types do
   # Common Types
   #
   deftype Accounting, :Accounting,
-    Record.extract(:Accounting, from: "include/types_types.hrl")
+    Record.extract(:Accounting, from: types_path("types_types.hrl"))
   deftype BusinessNotebook, :BusinessNotebook,
-    Record.extract(:BusinessNotebook, from: "include/types_types.hrl")
+    Record.extract(:BusinessNotebook, from: types_path("types_types.hrl"))
   deftype BusinessUserInfo, :BusinessUserInfo,
-    Record.extract(:BusinessUserInfo, from: "include/types_types.hrl")
+    Record.extract(:BusinessUserInfo, from: types_path("types_types.hrl"))
   deftype Data, :Data,
-    Record.extract(:Data, from: "include/types_types.hrl")
+    Record.extract(:Data, from: types_path("types_types.hrl"))
   deftype LazyMap, :LazyMap,
-    Record.extract(:LazyMap, from: "include/types_types.hrl")
+    Record.extract(:LazyMap, from: types_path("types_types.hrl"))
   deftype LinkedNotebook, :LinkedNotebook,
-    Record.extract(:LinkedNotebook, from: "include/types_types.hrl")
+    Record.extract(:LinkedNotebook, from: types_path("types_types.hrl"))
   deftype Note, :Note,
-    Record.extract(:Note, from: "include/types_types.hrl")
+    Record.extract(:Note, from: types_path("types_types.hrl"))
   deftype NoteAttributes, :NoteAttributes,
-    Record.extract(:NoteAttributes, from: "include/types_types.hrl")
+    Record.extract(:NoteAttributes, from: types_path("types_types.hrl"))
   deftype Notebook, :Notebook,
-    Record.extract(:Notebook, from: "include/types_types.hrl")
+    Record.extract(:Notebook, from: types_path("types_types.hrl"))
   deftype NotebookDescriptor, :NotebookDescriptor,
-    Record.extract(:NotebookDescriptor, from: "include/types_types.hrl")
+    Record.extract(:NotebookDescriptor, from: types_path("types_types.hrl"))
   deftype NotebookRestrictions, :NotebookRestrictions,
-    Record.extract(:NotebookRestrictions, from: "include/types_types.hrl")
+    Record.extract(:NotebookRestrictions, from: types_path("types_types.hrl"))
   deftype PremiumInfo, :PremiumInfo,
-    Record.extract(:PremiumInfo, from: "include/types_types.hrl")
+    Record.extract(:PremiumInfo, from: types_path("types_types.hrl"))
   deftype Publishing, :Publishing,
-    Record.extract(:Publishing, from: "include/types_types.hrl")
+    Record.extract(:Publishing, from: types_path("types_types.hrl"))
   deftype Resource, :Resource,
-    Record.extract(:Resource, from: "include/types_types.hrl")
+    Record.extract(:Resource, from: types_path("types_types.hrl"))
   deftype ResourceAttributes, :ResourceAttributes,
-    Record.extract(:ResourceAttributes, from: "include/types_types.hrl")
+    Record.extract(:ResourceAttributes, from: types_path("types_types.hrl"))
   deftype SavedSearch, :SavedSearch,
-    Record.extract(:SavedSearch, from: "include/types_types.hrl")
+    Record.extract(:SavedSearch, from: types_path("types_types.hrl"))
   deftype SavedSearchScope, :SavedSearchScope,
-    Record.extract(:SavedSearchScope, from: "include/types_types.hrl")
+    Record.extract(:SavedSearchScope, from: types_path("types_types.hrl"))
   deftype SharedNotebook, :SharedNotebook,
-    Record.extract(:SharedNotebook, from: "include/types_types.hrl")
+    Record.extract(:SharedNotebook, from: types_path("types_types.hrl"))
   deftype SharedNotebookRecipientSettings, :SharedNotebookRecipientSettings,
-    Record.extract(:SharedNotebookRecipientSettings, from: "include/types_types.hrl")
+    Record.extract(:SharedNotebookRecipientSettings, from: types_path("types_types.hrl"))
   deftype Tag, :Tag,
-    Record.extract(:Tag, from: "include/types_types.hrl")
+    Record.extract(:Tag, from: types_path("types_types.hrl"))
   deftype User, :User,
-    Record.extract(:User, from: "include/types_types.hrl")
+    Record.extract(:User, from: types_path("types_types.hrl"))
   deftype UserAttributes, :UserAttributes,
-    Record.extract(:UserAttributes, from: "include/types_types.hrl")
+    Record.extract(:UserAttributes, from: types_path("types_types.hrl"))
 
   # NoteStore
   #
   deftype ClientUsageMetrics, :ClientUsageMetrics,
-    Record.extract(:ClientUsageMetrics, from: "include/note_store_types.hrl")
+    Record.extract(:ClientUsageMetrics, from: types_path("note_store_types.hrl"))
   deftype NoteCollectionCounts, :NoteCollectionCounts,
-    Record.extract(:NoteCollectionCounts, from: "include/note_store_types.hrl")
+    Record.extract(:NoteCollectionCounts, from: types_path("note_store_types.hrl"))
   deftype NoteEmailParameters, :NoteEmailParameters,
-    Record.extract(:NoteEmailParameters, from: "include/note_store_types.hrl")
+    Record.extract(:NoteEmailParameters, from: types_path("note_store_types.hrl"))
   deftype NoteFilter, :NoteFilter,
-    Record.extract(:NoteFilter, from: "include/note_store_types.hrl")
+    Record.extract(:NoteFilter, from: types_path("note_store_types.hrl"))
   deftype NoteList, :NoteList,
-    Record.extract(:NoteList, from: "include/note_store_types.hrl")
+    Record.extract(:NoteList, from: types_path("note_store_types.hrl"))
   deftype NoteMetadata, :NoteMetadata,
-    Record.extract(:NoteMetadata, from: "include/note_store_types.hrl")
+    Record.extract(:NoteMetadata, from: types_path("note_store_types.hrl"))
   deftype NotesMetadataList, :NotesMetadataList,
-    Record.extract(:NotesMetadataList, from: "include/note_store_types.hrl")
+    Record.extract(:NotesMetadataList, from: types_path("note_store_types.hrl"))
   deftype NotesMetadataResultSpec, :NotesMetadataResultSpec,
-    Record.extract(:NotesMetadataResultSpec, from: "include/note_store_types.hrl")
+    Record.extract(:NotesMetadataResultSpec, from: types_path("note_store_types.hrl"))
   deftype NoteVersionId, :NoteVersionId,
-    Record.extract(:NoteVersionId, from: "include/note_store_types.hrl")
+    Record.extract(:NoteVersionId, from: types_path("note_store_types.hrl"))
   deftype RelatedQuery, :RelatedQuery,
-    Record.extract(:RelatedQuery, from: "include/note_store_types.hrl")
+    Record.extract(:RelatedQuery, from: types_path("note_store_types.hrl"))
   deftype RelatedResult, :RelatedResult,
-    Record.extract(:RelatedResult, from: "include/note_store_types.hrl")
+    Record.extract(:RelatedResult, from: types_path("note_store_types.hrl"))
   deftype RelatedResultSpec, :RelatedResultSpec,
-    Record.extract(:RelatedResultSpec, from: "include/note_store_types.hrl")
+    Record.extract(:RelatedResultSpec, from: types_path("note_store_types.hrl"))
   deftype SyncChunk, :SyncChunk,
-    Record.extract(:SyncChunk, from: "include/note_store_types.hrl")
+    Record.extract(:SyncChunk, from: types_path("note_store_types.hrl"))
   deftype SyncChunkFilter, :SyncChunkFilter,
-    Record.extract(:SyncChunkFilter, from: "include/note_store_types.hrl")
+    Record.extract(:SyncChunkFilter, from: types_path("note_store_types.hrl"))
   deftype SyncState, :SyncState,
-    Record.extract(:SyncState, from: "include/note_store_types.hrl")
+    Record.extract(:SyncState, from: types_path("note_store_types.hrl"))
 
   # UserStore
   #
   deftype AuthenticationResult, :AuthenticationResult,
-    Record.extract(:AuthenticationResult, from: "include/user_store_types.hrl")
+    Record.extract(:AuthenticationResult, from: types_path("user_store_types.hrl"))
   deftype BootstrapInfo, :BootstrapInfo,
-    Record.extract(:BootstrapInfo, from: "include/user_store_types.hrl")
+    Record.extract(:BootstrapInfo, from: types_path("user_store_types.hrl"))
   deftype BootstrapProfile, :BootstrapProfile,
-    Record.extract(:BootstrapProfile, from: "include/user_store_types.hrl")
+    Record.extract(:BootstrapProfile, from: types_path("user_store_types.hrl"))
   deftype BootstrapSettings, :BootstrapSettings,
-    Record.extract(:BootstrapSettings, from: "include/user_store_types.hrl")
+    Record.extract(:BootstrapSettings, from: types_path("user_store_types.hrl"))
   deftype PublicUserInfo, :PublicUserInfo,
-    Record.extract(:PublicUserInfo, from: "include/user_store_types.hrl")
+    Record.extract(:PublicUserInfo, from: types_path("user_store_types.hrl"))
 
   # Errors
   #
   deftype EDAMNotFoundException, :EDAMNotFoundException,
-    Record.extract(:EDAMNotFoundException, from: "include/errors_types.hrl")
+    Record.extract(:EDAMNotFoundException, from: types_path("errors_types.hrl"))
   deftype EDAMSystemException, :EDAMSystemException,
-    Record.extract(:EDAMSystemException, from: "include/errors_types.hrl")
+    Record.extract(:EDAMSystemException, from: types_path("errors_types.hrl"))
   deftype EDAMUserException, :EDAMUserException,
-    Record.extract(:EDAMUserException, from: "include/errors_types.hrl")
+    Record.extract(:EDAMUserException, from: types_path("errors_types.hrl"))
 
 end

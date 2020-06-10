@@ -1,4 +1,4 @@
-# 
+#
 # Copyright 2015 Johan Wärlander
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -114,10 +114,10 @@ defmodule Everex.Client do
   defp connect_note_store(state = %__MODULE__{}), do: state
 
   defp thrift_client_util(srv, path, module) when is_binary(srv) do
-    thrift_client_util(String.to_char_list(srv), path, module)
+    thrift_client_util(String.to_charlist(srv), path, module)
   end
   defp thrift_client_util(srv, path, module) when is_binary(path) do
-    thrift_client_util(srv, String.to_char_list(path), module)
+    thrift_client_util(srv, String.to_charlist(path), module)
   end
   defp thrift_client_util(srv, path, module) when is_atom(module) do
     {:ok, transport} = :thrift_https_transport.new(srv, path)
@@ -139,7 +139,7 @@ defmodule Everex.Client do
     {client, {status, convert_records(response)}}
   end
 
-  defp convert_records(value) when Record.is_record(value) do 
+  defp convert_records(value) when Record.is_record(value) do
     Types.to_struct(value)
   end
   defp convert_records(value) when is_list(value) do
@@ -152,7 +152,7 @@ defmodule Everex.Client do
     convert_records_in_list(tail, [convert_records(head)|acc])
   end
 
-  defp convert_structs(%{} = value) do 
+  defp convert_structs(%{} = value) do
     Types.to_record(value)
   end
   defp convert_structs(value) when is_list(value) do

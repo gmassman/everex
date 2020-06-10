@@ -73,11 +73,11 @@ defmodule Everex.OAuth.CallbackHandler do
   use Plug.Router
 
   def start do
-    Plug.Adapters.Cowboy.http(__MODULE__, nil, port: 4000)
+    Plug.Cowboy.http(__MODULE__, nil, port: 4000)
   end
 
   def shutdown do
-    Plug.Adapters.Cowboy.shutdown(OAuth.CallbackHandler.HTTP)
+    Plug.Cowboy.shutdown(OAuth.CallbackHandler.HTTP)
   end
 
   plug Plug.Logger
@@ -86,10 +86,10 @@ defmodule Everex.OAuth.CallbackHandler do
 
   get "/oauth_callback" do
     conn
-    |> Plug.Conn.fetch_params
+    |> Plug.Conn.fetch_query_params
     |> process_params
     |> respond
-    shutdown
+    shutdown()
   end
 
   match _ do

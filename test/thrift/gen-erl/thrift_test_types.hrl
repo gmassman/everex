@@ -45,14 +45,14 @@
 
 %% struct 'Insanity'
 
--record('Insanity', {'userMap' :: dict(),
+-record('Insanity', {'userMap' :: dict:dict(),
                      'xtructs' :: list()}).
 -type 'Insanity'() :: #'Insanity'{}.
 
 %% struct 'CrazyNesting'
 
 -record('CrazyNesting', {'string_field' :: string() | binary(),
-                         'set_field' :: set(),
+                         'set_field' :: sets:set(),
                          'list_field' = [] :: list(),
                          'binary_field' :: string() | binary()}).
 -type 'CrazyNesting'() :: #'CrazyNesting'{}.
@@ -96,8 +96,8 @@
                              'newdouble' :: float(),
                              'newstruct' :: 'Bonk'(),
                              'newlist' :: list(),
-                             'newset' :: set(),
-                             'newmap' :: dict(),
+                             'newset' :: sets:set(),
+                             'newmap' :: dict:dict(),
                              'newstring' :: string() | binary(),
                              'end_in_both' :: integer()}).
 -type 'VersioningTestV2'() :: #'VersioningTestV2'{}.
@@ -116,7 +116,7 @@
 
 %% struct 'GuessProtocolStruct'
 
--record('GuessProtocolStruct', {'map_field' :: dict()}).
+-record('GuessProtocolStruct', {'map_field' :: dict:dict()}).
 -type 'GuessProtocolStruct'() :: #'GuessProtocolStruct'{}.
 
 %% struct 'LargeDeltas'
@@ -128,7 +128,7 @@
                         'b1000' :: 'Bools'(),
                         'check_false' :: boolean(),
                         'vertwo2000' :: 'VersioningTestV2'(),
-                        'a_set2500' :: set(),
+                        'a_set2500' :: sets:set(),
                         'vertwo3000' :: 'VersioningTestV2'(),
                         'big_numbers' :: list()}).
 -type 'LargeDeltas'() :: #'LargeDeltas'{}.
@@ -146,7 +146,7 @@
 %% struct 'NestedMixedx2'
 
 -record('NestedMixedx2', {'int_set_list' :: list(),
-                          'map_int_strset' :: dict(),
+                          'map_int_strset' :: dict:dict(),
                           'map_int_strset_list' :: list()}).
 -type 'NestedMixedx2'() :: #'NestedMixedx2'{}.
 

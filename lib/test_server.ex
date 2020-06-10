@@ -1,4 +1,4 @@
-# 
+#
 # Copyright 2015 Johan Wärlander
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -34,7 +34,7 @@ defmodule Everex.NoteStore.TestServer do
 
   def handle_function(listTags, {token}) when is_binary(token) do
     {:reply, [
-        {:'Tag', String.to_char_list(token), "", "", 0},
+        {:'Tag', String.to_charlist(token), "", "", 0},
       ]}
   end
 end

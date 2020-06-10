@@ -167,8 +167,8 @@
 
 %% struct 'LazyMap'
 
--record('LazyMap', {'keysOnly' :: set(),
-                    'fullMap' :: dict()}).
+-record('LazyMap', {'keysOnly' :: sets:set(),
+                    'fullMap' :: dict:dict()}).
 -type 'LazyMap'() :: #'LazyMap'{}.
 
 %% struct 'ResourceAttributes'
@@ -221,7 +221,7 @@
                            'contentClass' :: string() | binary(),
                            'applicationData' :: 'LazyMap'(),
                            'lastEditedBy' :: string() | binary(),
-                           'classifications' :: dict(),
+                           'classifications' :: dict:dict(),
                            'creatorId' :: integer(),
                            'lastEditorId' :: integer()}).
 -type 'NoteAttributes'() :: #'NoteAttributes'{}.
