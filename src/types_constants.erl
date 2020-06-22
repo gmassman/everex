@@ -4,6 +4,7 @@
 %% DO NOT EDIT UNLESS YOU ARE SURE THAT YOU KNOW WHAT YOU ARE DOING
 %%
 
+-module(types_constants).
 
--include("note_store_types.hrl").
+-include("types_types.hrl").
 

@@ -52,20 +52,14 @@ defmodule Everex.NoteStore do
   @doc """
   Retrieves a single note given its guid.
   """
-  def get_note(client,
-               guid,
-               with_content \\ false,
-               with_resources_data \\ false,
-               with_resources_recognition \\ false,
-               with_resources_alternate_data \\ false)
-  do
-    thrift_call(client, :notestore, :getNote, [
-        guid, with_content, with_resources_data, with_resources_recognition,
-        with_resources_alternate_data
+  def get_note(client, guid, opts \\ []) do
+    result_spec = struct(Types.NoteResultSpec, opts)
+    thrift_call(client, :notestore, :getNoteWithResultSpec, [
+        guid, result_spec
     ])
   end
 
-  @doc"""
+  @doc """
   Creates a single notebook
   """
   def create_notebook(client, notebook) do

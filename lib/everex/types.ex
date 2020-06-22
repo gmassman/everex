@@ -48,8 +48,6 @@ defmodule Everex.Types do
     Record.extract(:NotebookDescriptor, from: types_path("types_types.hrl"))
   deftype NotebookRestrictions, :NotebookRestrictions,
     Record.extract(:NotebookRestrictions, from: types_path("types_types.hrl"))
-  deftype PremiumInfo, :PremiumInfo,
-    Record.extract(:PremiumInfo, from: types_path("types_types.hrl"))
   deftype Publishing, :Publishing,
     Record.extract(:Publishing, from: types_path("types_types.hrl"))
   deftype Resource, :Resource,
@@ -73,8 +71,6 @@ defmodule Everex.Types do
 
   # NoteStore
   #
-  deftype ClientUsageMetrics, :ClientUsageMetrics,
-    Record.extract(:ClientUsageMetrics, from: types_path("note_store_types.hrl"))
   deftype NoteCollectionCounts, :NoteCollectionCounts,
     Record.extract(:NoteCollectionCounts, from: types_path("note_store_types.hrl"))
   deftype NoteEmailParameters, :NoteEmailParameters,
@@ -89,6 +85,8 @@ defmodule Everex.Types do
     Record.extract(:NotesMetadataList, from: types_path("note_store_types.hrl"))
   deftype NotesMetadataResultSpec, :NotesMetadataResultSpec,
     Record.extract(:NotesMetadataResultSpec, from: types_path("note_store_types.hrl"))
+  deftype NoteResultSpec, :NoteResultSpec,
+    Record.extract(:NoteResultSpec, from: types_path("note_store_types.hrl"))
   deftype NoteVersionId, :NoteVersionId,
     Record.extract(:NoteVersionId, from: types_path("note_store_types.hrl"))
   deftype RelatedQuery, :RelatedQuery,
