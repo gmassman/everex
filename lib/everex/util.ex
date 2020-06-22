@@ -87,6 +87,7 @@ defmodule Everex.Util do
     quote do
       defmodule unquote(mod) do
         # @derive [Access, Collectable]
+        use StructAccess
         defstruct unquote(fields)
 
         Record.defrecord :record, unquote(tag), unquote(fields)
