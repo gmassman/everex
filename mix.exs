@@ -57,7 +57,6 @@ defmodule Everex.Mixfile do
       {:cowboy, "~> 2.8.0"},
       {:plug, "~> 1.10.2"},
       {:plug_cowboy, "~> 2.0"},
-      {:struct_access, "~> 1.1.2"}
     ]
   end
 end

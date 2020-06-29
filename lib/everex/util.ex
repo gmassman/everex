@@ -68,10 +68,10 @@ defmodule Everex.Util do
 
   defp do_struct_to_record(_the_struct, [], acc), do: acc |> Enum.reverse
   defp do_struct_to_record(the_struct, [{key, :undefined}|tail], acc) do
-    do_struct_to_record(the_struct, tail, [the_struct[key]|acc])
+    do_struct_to_record(the_struct, tail, [Map.get(the_struct, key)|acc])
   end
   defp do_struct_to_record(the_struct, [{key, []}|tail], acc) do
-    value = s2r_process_list(the_struct[key], [])
+    value = s2r_process_list(Map.get(the_struct, key), [])
     do_struct_to_record(the_struct, tail, [value|acc])
   end
 
@@ -86,8 +86,6 @@ defmodule Everex.Util do
   defmacro deftype(mod, tag, fields) do
     quote do
       defmodule unquote(mod) do
-        # @derive [Access, Collectable]
-        use StructAccess
         defstruct unquote(fields)
 
         Record.defrecord :record, unquote(tag), unquote(fields)
