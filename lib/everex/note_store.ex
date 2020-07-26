@@ -66,4 +66,14 @@ defmodule Everex.NoteStore do
     draft_notebook = struct(Types.Notebook, Map.to_list(notebook))
     thrift_call(client, :notestore, :createNotebook, [draft_notebook])
   end
+
+  def create_tag(client, opts \\ []) do
+    tag = struct(Types.Tag, opts)
+    thrift_call(client, :notestore, :createTag, [tag])
+  end
+
+  def update_note(client, guid, title, attrs \\ []) do
+    note = struct(Types.Note, [guid: guid, title: title] ++ attrs)
+    thrift_call(client, :notestore, :updateNote, [note])
+  end
 end
